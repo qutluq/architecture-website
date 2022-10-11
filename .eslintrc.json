@@ -1,3 +1,43 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "standard-with-typescript"],
+  "overrides": [{ "files": ["./src/**/*.ts", "./src/**/*.tsx"] }],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": ["./tsconfig.json"]
+  },
+  "plugins": ["react", "simple-import-sort", "unused-imports"],
+  "rules": {
+    "indent": "off",
+    "@typescript-eslint/indent": "off",
+    "space-before-function-paren": "off",
+    "@typescript-eslint/space-before-function-paren": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
+
+    "multiline-ternary": "off",
+    "simple-import-sort/imports": "error", // Import configuration for `eslint-plugin-simple-import-sort`
+    "simple-import-sort/exports": "error", // Export configuration for `eslint-plugin-simple-import-sort`
+
+    "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  },
+  "settings": {
+    "import/extensions": [".ts", ".tsx", ".js", ".jsx"]
+  }
 }
