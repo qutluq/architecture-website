@@ -15,7 +15,7 @@ export const Header = () => {
           return (
             <>
               <div className="mx-auto flex h-28 w-full items-center justify-between px-10">
-                <div className="ml-20 h-20 w-1/3">
+                <div className="h-20 w-1/3 sm:ml-10 lg:ml-20">
                   <Image width={80} height={80} src="/logo.svg" alt="Logo" />
                 </div>
                 <div className="hidden w-2/3 justify-start lg:block">
