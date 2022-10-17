@@ -40,4 +40,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Credits
 
-All images in the gallery were downloaded from unsplash.com
+All images in the gallery were downloaded from [unsplash.com](unsplash.com)
