@@ -1,13 +1,9 @@
-import { Project } from "./types";
+import type { ProjectType } from "./types";
 import Image from "next/image";
 import { Button } from "src/components/button";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 
-type PropTypes = {
-  projects: Project[];
-};
-
-export const Projects = ({ projects }: PropTypes) => {
+export const Projects = ({ projects }: { projects: ProjectType[] }) => {
   return (
     <div className="relative mx-auto mb-20 flex min-h-full w-full flex-col items-center justify-center gap-3 px-10 lg:gap-10">
       <div className="flex w-full items-center justify-start xl:justify-center">
@@ -49,7 +45,7 @@ export const Projects = ({ projects }: PropTypes) => {
               <Button
                 variant="text"
                 className="hidden w-48 items-center gap-3 border-0 bg-white p-3 sm:flex md:mt-10 lg:ml-10"
-                href={`/project/${project.id}`}
+                href={`/projects/${project.id}`}
               >
                 <span className="inline uppercase text-gray-700">
                   view project

@@ -1,4 +1,4 @@
-export type Project = {
+export type ProjectType = {
   id: string;
   title: string;
   featuredImage: string;
