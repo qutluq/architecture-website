@@ -1,11 +1,14 @@
 import type { ComponentProps } from "react";
 import { classNames } from "src/utils";
 import type { Variant } from "src/components/button";
+import Link from "next/link";
 
 type ButtonProps = ComponentProps<"button"> & {
   isRounded?: boolean;
   hasBorder?: boolean;
   variant?: Variant;
+  href?: string;
+  hasPadding?: boolean;
 };
 
 const background = (variant: Variant): string => {
@@ -22,11 +25,14 @@ export const Button = ({
   hasBorder = true,
   isRounded = false,
   variant = "primary",
+  hasPadding = true,
+  href,
   ...props
 }: ButtonProps) => {
   const css = classNames(
-    "flex justify-center gap-1 px-4 py-2 text-center text-sm font-medium text-gray-100 items-center",
+    "flex justify-center gap-1 text-center text-sm font-medium text-gray-100 items-center",
     className,
+    hasPadding && "px-4 py-2",
     hasBorder && "border",
     isRounded && "rounded-md",
     props.disabled === undefined || !props.disabled
@@ -34,5 +40,11 @@ export const Button = ({
       : "bg-sky-300"
   );
 
-  return <button {...props} className={css} />;
+  return href ? (
+    <Link href={href}>
+      <button {...props} className={css} />
+    </Link>
+  ) : (
+    <button {...props} className={css} />
+  );
 };
