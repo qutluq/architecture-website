@@ -59,7 +59,7 @@ export const Projects = ({ projects }: { projects: ProjectType[] }) => {
             <Button
               variant="text"
               className="absolute bottom-3 right-0 flex w-1/12 items-center gap-3 border-0 bg-white sm:hidden md:mt-10 lg:ml-10"
-              href={`/project/${project.id}`}
+              href={`/projects/${project.id}`}
               hasPadding={false}
             >
               <ArrowLongRightIcon
