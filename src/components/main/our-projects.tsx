@@ -12,7 +12,7 @@ export const OurProjects = () => (
       <Image
         width={570}
         height={255}
-        src="/assets/sample-project.png"
+        src="/assets/project-1.png"
         objectFit="contain"
       />
       <Image
