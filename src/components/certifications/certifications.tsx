@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { ProjectType } from "src/components/project";
 
-export const Certifications = ({ project }: { project: ProjectType }) => {
+export const Certifications = () => {
   return (
     <div className="relative mx-auto mb-20 flex min-h-full w-full flex-col items-center justify-center gap-3 px-10 lg:gap-10">
       <div className="flex w-full items-center justify-start xl:justify-center">
